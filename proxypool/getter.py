@@ -59,6 +59,7 @@ class FreeProxyGetter(object, metaclass=ProxyMetaclass):
             tds = doc('td.ip').items()
             for td in tds:
                 td.find('p').remove()
+                #print (td.text())
                 yield td.text().replace(' ', '')
 
     def crawl_haoip(self):
